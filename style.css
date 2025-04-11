@@ -37,3 +37,48 @@ body, html {
   width: 100%;
   object-fit: cover;
 }
+
+/* Grid layout for 4 equal image sections */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-item {
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  z-index: 1000;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
