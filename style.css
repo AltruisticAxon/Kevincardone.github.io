@@ -1,15 +1,17 @@
+/* Reset and base styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
+/* Grid container taking full screen */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,59 +20,35 @@ body, html {
   width: 100vw;
 }
 
+/* Each image box */
 .grid-item {
   position: relative;
   overflow: hidden;
   border: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop/resize to fill box */
+  display: block;
+}
+
+/* Hover zoom effect */
+.grid-item:hover {
+  transform: scale(1.02);
+  z-index: 1;
   transition: transform 0.3s ease;
 }
 
-.grid-item:hover {
-  transform: scale(1.02);
-}
-
-.grid-item img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Grid layout for 4 equal image sections */
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-
-.grid-item {
-  border: 2px solid black;
-  overflow: hidden;
-}
-
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Footer */
+/* Footer below the fold */
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   background-color: #000;
   color: #fff;
-  padding: 10px;
+  padding: 30px 20px;
   font-size: 14px;
+  line-height: 1.6;
   text-align: center;
-  z-index: 1000;
 }
 
 footer a {
@@ -81,4 +59,3 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
