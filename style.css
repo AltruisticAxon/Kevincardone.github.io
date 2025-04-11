@@ -41,7 +41,7 @@ html, body {
   transition: transform 0.3s ease;
 }
 
-/* Footer appears below the screen, not on top of it */
+/* Footer styles */
 footer {
   background-color: #000;
   color: #fff;
@@ -50,6 +50,7 @@ footer {
   line-height: 1.6;
   text-align: center;
   width: 100%;
+  margin-top: 20px;
 }
 
 footer a {
@@ -60,3 +61,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
